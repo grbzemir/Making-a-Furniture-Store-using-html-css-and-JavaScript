@@ -1,9 +1,679 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Titillium Web", sans-serif;
+    overflow-y: auto;
+}
+
+main {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-right: 0.5px solid #d8d8d8;
+    height: 100vh;
+    width: 240px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+}
+
+.menu_ic {
+    padding: 20px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.menu_agac {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menu_agac li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.menu_agac li:hover {
+    background-color: #838282;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.menu_agac li:hover a {
+    color: #FFF;
+}
+
+.menu_agac li.aktif {
+    background-color: #000;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.menu_agac li.aktif:hover {
+    background-color: #3f3e3e;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.menu_agac li.aktif a {
+    color: #FFF;
+}
+
+.menu_agac li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.hr_style {
+    width: 95%;
+    border: none;
+    height: 0.5px;
+    color: #cecdcd;
+    background-color: #cecdcd;
+}
+
+.mini_baslik {
+    font-size: 12px;
+    color: #aaa9a9;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.girisdivi {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+}
+
+.login_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: #FFF;
+    border: 1px solid #ccc8c8;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login_button:hover {
+    background-color: #838282;
+    border: 0.5px solid #ccc8c8;
+    color: #FFF;
+}
+
+.icerik {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: -20px;
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    height: 100vh;
+
+}
+
+.ust_kisim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.arama {
+    width: 350px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+}
+
+.buton_arkaplan {
+    background-color: #f1f0f0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.panel_buton {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.website_buton {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.cart_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: #eeeded;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+.profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profil_image {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.menu_btn {
+    display: none;
+}
+
+.kesfet_baslik {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    border-bottom: 1px solid #e7e6e6;
+}
+
+.kesfet_baslik h1 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.urun_butonlari {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.ozel_fiyat {
+    padding: 10px 15px 10px 15px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.ozel_fiyat:hover {
+    background-color: #1b1b1b;
+}
+
+.diger_buton {
+    padding: 10px 15px 10px 15px;
+    background-color: #f3f3f3;
+    color: #000000;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.diger_buton:hover {
+    background-color: #d6d4d4;
+}
+
+.kesfet_urunler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.kesfet_urunler_sol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 20px;
+
+}
+
+.indirim_divi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    background-image: url('../images/mob_1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.indirim {
+    font-size: 50px;
+    color: #000;
+    font-weight: 600;
+}
+
+.indirim_buton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dddcdc;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #FFF;
+    width: 200px;
+}
+
+.sandalye_divi {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('../images/sandalye_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding-right: 20px;
+}
+
+.sandalye_baslik {
+    font-size: 40px;
+}
+
+.fiyat {
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+.kesfet_urunler_sag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 20px;
+}
+
+.vazo_divi {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 700px;
+    background-image: url('../images/vazo_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 20px 0px 0px;
+    text-align: right;
+}
+
+.koltuk_divi {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 700px;
+    background-image: url('../images/koltuk_1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 20px 0px 0px;
+    text-align: right;
+}
+
+.cok_satanlar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.cok_satan1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url('../images/cok_satan_1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 0px 0px 20px;
+    text-align: left;
+    height: 350px;
+}
+
+.cok_satan2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url('../images/cok_satan_2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 0px 0px 20px;
+    text-align: right;
+    height: 350px;
+}
+
+.cok_satan3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url('../images/cok_satan_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 0px 0px 20px;
+    text-align: right;
+    height: 350px;
+}
+
+.cok_satan4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url('../images/cok_satan_4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 0px 0px 20px;
+    text-align: right;
+    height: 350px;
+}
+
+@media only screen and (min-width:864px) and (max-width: 1070px) {
+    .kesfet_urunler {
+        flex-wrap: wrap;
+    }
+
+    .arama {
+        width: 200px;
+    }
+
+    .kesfet_baslik {
+        padding: 10px;
+    }
+
+    .kesfet_baslik h1 {
+        font-size: 30px;
+    }
+
+    .cok_satanlar {
+        flex-flow: wrap;
+    }
+
+    .cok_satan1,
+    .cok_satan2,
+    .cok_satan3,
+    .cok_satan4 {
+        width: 48%;
+
+    }
+}
+
+@media only screen and (min-width:624px) and (max-width: 864px) {
+    .menu {
+        display: none;
+    }
+
+    .icerik {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+
+    .kesfet_urunler {
+        flex-wrap: wrap;
+    }
+
+    .arama {
+        width: 200px;
+    }
+
+    .kesfet_baslik {
+        padding: 10px;
+    }
+
+    .kesfet_baslik h1 {
+        font-size: 30px;
+    }
+
+    .cok_satanlar {
+        flex-flow: wrap;
+    }
+
+    .cok_satan1,
+    .cok_satan2,
+    .cok_satan3,
+    .cok_satan4 {
+        width: 48%;
+
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width: 624px) {
+    .menu {
+        display: none;
+    }
+
+    .icerik {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+
+    .kesfet_urunler {
+        flex-wrap: wrap;
+    }
+
+    .arama {
+        width: 200px;
+    }
+
+    .kesfet_baslik {
+        padding: 10px;
+    }
+
+    .kesfet_baslik h1 {
+        font-size: 30px;
+    }
+
+    .cok_satanlar {
+        flex-flow: wrap;
+    }
+
+    .cok_satan1,
+    .cok_satan2,
+    .cok_satan3,
+    .cok_satan4 {
+        width: 100%;
+    }
+
+    .urun_butonlari {
+        display: none;
+    }
+
+    .buton_arkaplan {
+        display: none;
+    }
+
+    .kesfet_urunler_sag {
+        height: 350px;
+    }
+
+    .vazo_divi,
+    .koltuk_divi {
+        height: 350px;
+    }
+
+    .kesfet_baslik {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        display: none;
+    }
+
+    .icerik {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+
+    .kesfet_urunler {
+        flex-wrap: wrap;
+    }
+
+    .arama {
+        width: 200px;
+    }
+
+    .kesfet_baslik {
+        margin-top: 10px;
+    }
+
+    .kesfet_baslik h1 {
+        font-size: 30px;
+    }
+
+    .cok_satanlar {
+        flex-flow: wrap;
+    }
+
+    .cok_satan1,
+    .cok_satan2,
+    .cok_satan3,
+    .cok_satan4 {
+        width: 100%;
+    }
+
+    .urun_butonlari {
+        display: none;
+    }
+
+    .buton_arkaplan {
+        display: none;
+    }
+
+    .cart_button {
+        display: none;
+    }
+
+    .kesfet_urunler_sag {
+        height: 350px;
+        flex-wrap: wrap;
+    }
+
+    .vazo_divi,
+    .koltuk_divi {
+        height: 350px;
+    }
+
+    .cok_satan_baslik {
+        margin-top: 350px;
+    }
 }
