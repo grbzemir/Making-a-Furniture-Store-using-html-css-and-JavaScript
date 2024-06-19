@@ -3,57 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Furniture Mobilya WebSite</title>
+        <title>Furniture Mobilya Website</title>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
-
+        <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
-
         <main>
-
             <div class="menu" id="menu">
                 <div class="menu_ic">
                     <img src="images/logo.png" alt="logo" class="logo">
+
                     <ul class="menu_agac">
+
                         <li class="aktif">
                             <i class="fa-solid fa-earth-europe"></i>
                             <a href="#">Keşfet</a>
                         </li>
+
                         <li>
                             <i class="fa-solid fa-list"></i>
                             <a href="#">Kategoriler</a>
-
                         </li>
+
                         <li>
                             <i class="fa-solid fa-fire"></i>
                             <a href="#">Popüler Ürünler</a>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-gift"></i>
+                            <a href="#">Hediyelik Eşyalar</a>
 
                         </li>
                     </ul>
 
-                    <hr class="hr_stlye" />
-                    <p class="mini_Baslik">Hizli İslemler</p>
-
+                    <hr class="hr_style" />
+                    <p class="mini_baslik">Hizli İşlemler</p>
                     <ul class="menu_agac">
                         <li>
-                            <i class=fa-solid fa-code-pull-request></i>
-                            <a href="#">Ürün Talep Olusturma</a>
-
+                            <i class="fa-solid fa-code-pull-request"></i>
+                            <a href="#">Ürün Talebi</a>
                         </li>
-
                         <li>
                             <i class="fa-solid fa-comment-dots"></i>
-                            <a href="#">İletişim Messages</a>
-                        </li>
+                            <a href="#">Mesajlar</a>
 
+                        </li>
                     </ul>
 
-                    <div class="girisDivi">
+                    <div class="girisdivi">
                         <button class="login_button">
                             <p>Giris</p>
                             <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -64,109 +65,113 @@
 
                 </div>
 
-                <div class="icerik">
-                    <div class="ust_kisim">
-                        <input type="search" class="arama"
-                            placeholder="Arama" />
-                        <div class="buton_arkaplan">
-                            <button class="panel_buton">Panel</button>
-                            <button class="website_buton">WebSite</button>
+            </div>
+            <div class="icerik">
+                <div class="ust_kisim">
+                    <input type="search" class="arama" placeholder="Arama" />
+                    <div class="buton_arkaplan">
+
+                        <button class="panel_buton">PANEL</button>
+
+                        <button class="website_buton">WEBSİTE</button>
+
+                    </div>
+
+                    <div class="cart">
+                        <button class="cart_button">
+                            <p>Sepet</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+
+                        <div class="profil">
+                            <img src="images/profil_image.jpeg"
+                                alt="profil_image" class="profil_image">
+                            <p>Bilge Uzun</p>
 
                         </div>
 
-                        <div class="cart">
-                            <button class="cart_button">
-                                <p>Sepet</p>
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                            <div class="profil">
-                                <img src="images/profil_image.jpeg"
-                                    alt="profil_image" class="profil_image">
-                                <p>Bilge Uzun</p>
-                            </div>
-
-                            <div class="menu_btn">
-                                <a href="#"><i class="fa-solid fa-bars"></i></a>
-                            </div>
+                        <div class="menu_btn">
+                            <a href="#"><i class="fa-solid fa-bars"></i></a>
 
                         </div>
 
                     </div>
 
-                    <div class="kesfet_baslik">
-                        <h1>Ürünleri Keşfet</h1>
-                        <div class="urun_butonlari">
-                            <button class="ozel_fiyat">Özel Fiyat</button>
-                            <button class="diger_buton">Yeni Ürünler</button>
-                            <button class="diger_buton">Çok Satanlar</button>
+                </div>
+
+                <div class="kesfet_baslik">
+                    <h1>Ürünleri Keşfet</h1>
+                    <div class="urun_butonlari">
+                        <button class="ozel_fiyat">Özel Fiyat</button>
+                        <button class="diger_buton">Yeni Ürünler</button>
+                        <button class="diger_buton">Çok Satanlar</button>
+
+                    </div>
+
+                </div>
+
+                <div class="kesfet_urunler">
+                    <div class="kesfet_urunler_sol">
+                        <div class="indirim_divi">
+                            <p class="indirim">%50'ye varan <br> indirim
+                                kazanin</p>
+                            <button class="indirim_buton">İndirim AL</button>
+
+                        </div>
+
+                        <div class="sandalye_divi">
+                            <p class="sandalye_baslik">Modern Sandalye</p>
+                            <p class="fiyat">₺2.500</p>
 
                         </div>
 
                     </div>
 
-                    <div class="kesfe_urunler">
-                        <div class="kesfet_urunler_sol">
-                            <div class="indirim_divi">
-                                <p class="indirim">%50'ye varan <br> indirim
-                                    Kazanin</p>
-                                <button class="inidirim_butonu">İndirim
-                                    Al</button>
-                            </div>
-
-                            <div class="sandalye_divi">
-                                <p class="sandalye_baslik">Modern Sandalye</p>
-                                <p class="fiyat">₺12.500</p>
-                            </div>
+                    <div class="kesfet_urunler_sag">
+                        <div class="vazo_divi">
+                            <p class="sandalye_baslik">Seramik<br>Vazo</p>
+                            <p class="fiyat">₺385</p>
 
                         </div>
 
-                        <div class="kesfet_urunler_sag">
-                            <div class="vazo_divi">
-                                <p class="sandalye_baslik">Seramik<br>Vazo</p>
-                                <p class="fiyat">₺1.750</p>
-
-                            </div>
-
-                            <div class="koltuk_divi">
-                                <p class="sandalye_baslik">Modern<br>Koltuk</p>
-                                <p class="fiyat">₺15.750</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="kesfet_baslik cok_satan_baslik">
-                        <h1>Çok Satanlar</h1>
-
-                    </div>
-
-                    <div class="cok_satanlar">
-
-                        <div class="cok_satan1">
-                            <p class="sandalye_baslik">Modern<br>Koltuk</p>
-                            <p class="fiyat">₺15.750</p>
-                        </div>
-
-                        <div class="cok_satan2">
+                        <div class="koltuk_divi">
                             <p class="sandalye_baslik">Modern <br>Koltuk</p>
-                            <p class="fiyat">₺11.500</p>
+                            <p class="fiyat">₺3.750</p>
 
                         </div>
 
-                        <div class="cok_satan3">
-                            <p class="sandalye_baslik">Sandalye</p>
-                            <p class="fiyat">₺3.500</p>
+                    </div>
 
-                        </div>
+                </div>
 
-                        <div class="cok_satan4">
-                            <p class="sandalye_baslik">Konsol</p>
-                            <p class="fiyat">₺5.500</p>
+                <div class="kesfet_baslik cok_satan_baslik">
 
-                        </div>
+                    <h1>Çok Satanlar</h1>
+
+                </div>
+
+                <div class="cok_satanlar">
+                    <div class="cok_satan1">
+                        <p class="sandalye_baslik">Modern <br>Koltuk</p>
+                        <p class="fiyat">₺13.542</p>
+
+                    </div>
+
+                    <div class="cok_satan2">
+                        <p class="sandalye_baslik">Modern <br>Koltuk</p>
+                        <p class="fiyat">₺17.521</p>
+
+                    </div>
+
+                    <div class="cok_satan3">
+                        <p class="sandalye_baslik">Sandalye</p>
+                        <p class="fiyat">₺27.250</p>
+
+                    </div>
+
+                    <div class="cok_satan4">
+                        <p class="sandalye_baslik">Konsol</p>
+                        <p class="fiyat">₺19.000</p>
 
                     </div>
 
@@ -176,12 +181,12 @@
 
         </main>
 
-        <script src="script.js"></script>
-
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="js/script.js"></script>
 
     </body>
 </html>
